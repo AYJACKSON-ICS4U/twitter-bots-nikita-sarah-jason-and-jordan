@@ -50,3 +50,9 @@ console.log("Starting up");
 T.post('statuses/update', { status: 'HI THIS IS ME' }, function(err, data, response) {
   console.log(data)
 })
+
+
+# December 8th, 2017
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+We can use some ideas from video 15.7 to send x, y coordinates back and forth between our bots.
