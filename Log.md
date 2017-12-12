@@ -52,7 +52,7 @@ T.post('statuses/update', { status: 'HI THIS IS ME' }, function(err, data, respo
 })
 
 
-# December 8th, 2017
+# December 12th, 2017
 ---------------------------------------------------------------------------------------------------------------------------------------------
 
 We can use some ideas from video 15.7 to send x, y coordinates back and forth between our bots.
