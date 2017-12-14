@@ -56,3 +56,37 @@ T.post('statuses/update', { status: 'HI THIS IS ME' }, function(err, data, respo
 ---------------------------------------------------------------------------------------------------------------------------------------------
 
 We can use some ideas from video 15.7 to send x, y coordinates back and forth between our bots.
+
+# December 14th, 2017
+---------------------------------------------------------------------------------------------------------------------------------------------
+### Updated Code (with stream)
+#### When Sarah's Bot tweets with this hashtag, Nikita's bot 'picks' up the tweet
+//Bot Username: S2t645
+//#s563BLc7cn
+
+var Twit = require('twit');
+
+var T = new Twit({
+	consumer_key:'yKNIoiFdxvFzZmqKmOOX36YcD'
+, consumer_secret:'6l7qRMkNSYFwRfExJ6qOfsnzKANJApAo72yIipBprmkwNv1fxE'
+, access_token:'938805392137641984-lijIGn3uZQTjab4xKIL6h4rJOeuzONY'
+, access_token_secret:'WxbghmOQ1VSoNQhSMG6NNls94PLpEow6islHdMKjX8T0b'
+})
+
+var a = 0;
+console.log("Starting up");
+
+var stream = T.stream('statuses/filter', { track: '#s563BLc7cn'})
+
+stream.on('tweet', function(tweet){
+  console.log(tweet);
+})
+
+/*T.get('search/tweets', { q: 'hello', count: 3 },  function (err, data, response) {
+  console.log(data)
+})*/
+
+/*T.post('statuses/update', { status: 'HI THIS IS ME' }, function(err, data, response) {
+  console.log(data)
+})*/
+
