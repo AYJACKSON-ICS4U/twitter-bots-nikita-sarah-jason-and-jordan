@@ -56,3 +56,12 @@ T.post('statuses/update', { status: 'HI THIS IS ME' }, function(err, data, respo
 ---------------------------------------------------------------------------------------------------------------------------------------------
 
 We can use some ideas from video 15.7 to send x, y coordinates back and forth between our bots.
+
+
+# December 15th, 2017
+---------------------------------------------------------------------------------------------------------------------------------------------
+To send the coordinates in the tweet, we will have to convert from a string to a number. The code from this website could help us remove the hashtag and other parts of the tweet that aren't part of the coordinates.
+
+
+https://codereview.stackexchange.com/questions/115885/extract-numbers-from-a-string-javascript
+
